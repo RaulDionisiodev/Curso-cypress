@@ -19,4 +19,20 @@ Na aplicação Eletron (Aplicação desktop que usamos para rodar os testes) pod
 Para criar um teste precisamos criar um arquivo _nome_da_suite.spec.js_.
 A primeira coisa é colocar um nome na suíte de teste na função _describe_. Essa função recebe como parâmetros o nome da suíte e as outras funções de teste.
 Se algo precisa ser repetido antes de todos os testes usanmos a função _beforeEach_. 
-O comando que abre uma url é o `cy.visit`, em cada `it` codificamos um teste diferente.
+O comando/função que abre uma url é o `cy.visit`, em cada `it` codificamos um teste diferente.
+
+### Aula  3 - Digitando em campos de texto
+
+Uma das formas de localizar elementos com cypres é usando seletores css (id, class, etc..). 
+O comando  `cy.get` é o comando usado para identificar elementos através de seletores css.
+O comando `type` é usado para dizer ao cypress qual o valor que será digitado no campo selecionado pelo cy.get
+É possível usar variáveis para valores que são repetidos muitas vezes no script. O cypress entende as especificações do ES6 (arrow functions, template literals, const e etc)
+Quando eu quero rodar somente um teste da minha suíte eu uso a palavra reservada `only` após o `it`.
+O cypress usa a biblioteca mocha e tem as mesmas funcionalidades da mesma. O only é uma funcionalidade do mocha.
+Quando salvamos o arquivo o cypress roda automáticamente os testes.
+
+### Aula 4 - Interagindo com inputs do tipo select
+
+Para interagir com um select nós usamos o cy.get para selecionar o elemento e usamos o comando `select` para dizer ao cypress qual a option que deve ser selecionada.
+
+### Aula 5 - Interagindo com Radio buttons
