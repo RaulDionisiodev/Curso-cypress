@@ -36,3 +36,16 @@ Quando salvamos o arquivo o cypress roda automáticamente os testes.
 Para interagir com um select nós usamos o cy.get para selecionar o elemento e usamos o comando `select` para dizer ao cypress qual a option que deve ser selecionada.
 
 ### Aula 5 - Interagindo com Radio buttons
+
+Quando um input radio é selecionado o outro e desselecionado automáticamente.
+O comando para selecionar um radio button é o `check`. Selecionamos o elemento pelo id e usamos a função check nele.
+
+
+### Aula 6 - Interagindo com checkboxes
+
+Diferentes dos radio buttons, os checkboxes podem ser selecionados todos ao mesmo tempo.
+Também usamos a função check para selecionar um checkbox. A forma de fazer é a mesma para radio buttons.
+Para desselecionar um checkbox a função usada é o `uncheck`
+
+
+### Aula 7 - Realizando verificações (assertions)
