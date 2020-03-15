@@ -49,3 +49,14 @@ Para desselecionar um checkbox a função usada é o `uncheck`
 
 
 ### Aula 7 - Realizando verificações (assertions)
+
+Existem vários tipos de verficação que podemos fazer. Um deles é o de verificar se um determinado trecho de html tem um texto específico.
+Uso o `cy.get` para selecionar o elemento e a função `should` para selecionar o que deve ser verificado (primeiro parâmetro) e qual texto deve ter (segundo parâmetro).
+É possível verificar sem um elemento existe, se um elemento especifico tem um texto entre outras coisas.
+A verificação por texto é case-sensitive, ou seja, diferencia as maiúsculas das minúsculas. Caso haja diferença entre letras maiúsculas e minúsculas o teste vai falhar.
+No cypress é possível criar um álias para um seletor css para repetí-lo ao longo dos testes.
+Para criar o álias de um elemento devemos usar a função `as` e colocar no parâmatro o nome que queremos dar ao mesmo. Para usar o àlias devemos colocar uma `@` e o nome selecionado. Quando criamos um álias ele salva o estado do elemento na hora em que ele foi criado. Se o elemento mudar ao longo do teste precisamos identificá-lo 
+A função `clear` limpa campos de texto.
+
+
+### Aula 8 - Testes end-to-end com Cypress

@@ -20,11 +20,27 @@ describe("tickets", () => {
         cy.get('#vip').check();
     })
 
-    it.only("Selects 'friend' and 'publication', then uncheck 'friend'", ()=> {
+    it("Selects 'friend' and 'publication', then uncheck 'friend'", ()=> {
         cy.get('#friend').check();
         cy.get('#publication').check();
         cy.get("#friend").uncheck();
     })
 
-    it("has 'TICKETBOX' HEADER'S HEADING", () => {});
+    it("has 'TICKETBOX' HEADER'S HEADING", () => {
+        cy.get("header h1").should('contain',"TICKETBOX");
+    });
+
+    it.only("alerts on invalid email", () => {
+        cy.get("#email")
+            .as("email")
+            .type("talkingabouttesting-gmail.com");
+        
+        cy.get("#email.invalid").should("exist");
+
+        cy.get("@email")
+            .clear()
+            .type("talkingabouttesting@gmail.com");
+
+        cy.get("#email.invalid").should("not.exist");
+    })
 });
