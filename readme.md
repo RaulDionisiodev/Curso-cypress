@@ -60,3 +60,8 @@ A função `clear` limpa campos de texto.
 
 
 ### Aula 8 - Testes end-to-end com Cypress
+
+Uso das informações das aulas anteriores para criar um teste completo na aplicação exemplo. Vamos preencher todos os campos e verificar se o botão de confirmação fica habilitado. Depois usaremos o botão reset para apagar todos os campos e verificaremos se o botão de confirmação fica dasabilitado.
+A função `click` pode ser usada para clicar no elemento selecionado, sejam botões, checkboxes, radio buttons e outros.
+
+### Aula 9 - Comandos Customizados
