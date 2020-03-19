@@ -75,3 +75,10 @@ Posso criar quantos comandos customizados eu quisar e reutilizá-los na aplicaç
 
 ### Aula 10 - Headless mode & CI
 
+O modo headless é o Cypress rodando os testes em segundo plano, sem utilizar a ferramenta gráfica que se apre ao usarmos o `yarn run cypress open`.
+Na Primeira aula criamos um script chamado 'test' no arquivo `package.json`. Nesse script colocamos o comando `cypress run`, é esse comando que roda o cypress em modo headless. Podemos usar esse comando ou o `npm test` porque a configuração do package.json nos dá essa possibilidade.
+Em modo headless o cypress cria um vídeo do navegador rodando os testes, o que é bastante útil especialmente quando os testes dão erro. Os vídeos ficam na pasta 'videos' que é criada após a primeira ultilização do Cypress em modo headless. As demais informações sobre os testes são exibidas no terminal.
+O curso aborda o uso de continuous integrations usando o gitlab. Para isso é preciso ter uma conta no gitlab e colocar o projeto em um repositório.
+O primeiro passo para a CI com gitlab é criar um arquivo de configuração chamado `.gitlab-ci.yml`. É nele que colocamos todo o pipeline de CI no gitlab como código. 
+Depois de criado, o arquivo deve ser comitado e colocado no repositório do gitlab. Após a subida do arquivo o gitlab já usa o arquivo yml para instalar  e configurar o Cypress e roda os testes.
+Cada commit dispara o pipeline que roda os teste automáticamente e mostra o status de todo o processo além gravar o vídeo. 
