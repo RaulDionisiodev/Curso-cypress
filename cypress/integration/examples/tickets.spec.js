@@ -74,4 +74,23 @@ describe("tickets", () => {
         cy.get("@submitButton").should("be.disabled")
 
     })
+
+    it.only("fills mandatory fields using support comand", () => {
+        const customer = {
+            firstname: "João",
+            lastname: "Silva",
+            email:"joao@exemplo.com"
+        }
+
+        cy.fillMandatoryFields(customer);
+
+        cy.get("button[type='submit']")
+            .as("submitButton")
+            .should("not.be.disabled")
+        
+        cy.get("#agree").uncheck() //desabilitando um dos campos obrigatórios
+
+        cy.get("@submitButton").should("be.disabled")
+
+    })
 });

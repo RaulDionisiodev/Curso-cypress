@@ -65,3 +65,13 @@ Uso das informações das aulas anteriores para criar um teste completo na aplic
 A função `click` pode ser usada para clicar no elemento selecionado, sejam botões, checkboxes, radio buttons e outros.
 
 ### Aula 9 - Comandos Customizados
+
+Um teste end-to-end faz em um site ações que o usuário final faria e verificações das respostas do site em relação ao que o usuário final espera.
+Nas ferramentas de automação como o Seleniun são usadas page objects. Com o Cypress isso não é recomendado. Uma alternativa que substitui as page objects são os comandos customizados.
+Esses comandos nada mais são do que funções que realizam ações no site e podem ser chamadas durante os testes.
+Para chamar esse comando customizado usamos o `cy.nome_do_comando`, da mesma forma que usamos as funções nativas do Cypress.
+As funções customizadas ficam no arquivo `comands.js` dentro da pasta `support`.
+Posso criar quantos comandos customizados eu quisar e reutilizá-los na aplicação.
+
+### Aula 10 - Headless mode & CI
+

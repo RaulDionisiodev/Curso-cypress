@@ -30,13 +30,25 @@ describe("Grupos", () =>{
         cy.get("table td").should("contain", "19:30")
     })
 
-    it.only("Seaching error message", () => {
+    it("Seaching error message", () => {
         cy.get('[name=bairro]').type('Olaria');
         cy.get("input[type='submit']").click();
 
         cy.get("h3").should(
             "contain", 
             "Não foram encontrados grupos de oração.");
-
     })
+
+    it.only("Fill some fields using support comand", () =>{
+        const data = {
+            cidade : "Rio de Janeiro",
+            bairro : "Bangu"
+        }
+        cy.fillSomeFields(data);
+
+        cy.get("table td").should("contain", data.cidade)
+        cy.get("table td").should("contain", data.bairro)
+    })
+
+
 });
