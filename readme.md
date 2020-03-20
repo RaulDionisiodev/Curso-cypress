@@ -7,7 +7,7 @@ Anotações do curso de cypress js da [Escola Talking About Testing](https://tal
 
 * Inicializar um repositório git e criar o arquivo _.gitignore_.
 * Inicializar um projeto com NPM usando `npm init` o qual vai criar o arquivo _package.json_
-* Instalar o cypress com o comando `npm instal cypress --dev` - Eu só consegui instalar com o yarn: `yarn add cypress --dev`
+* Instalar o cypress com o comando `npm install cypress --dev` - Eu só consegui instalar com o yarn: `yarn add cypress --dev`
 * Para rodar o cypress usa-se o comando `npx cypress open`. No meu caso precisei usar o `yarn run cypress open`
 
 O npx cypress open, quando rodado pela primeira vez, cria a pasta _cypress_ e o arquivo _cypress.json_. Nossos testes ficam na pasta _integrations_. Na pasta _suport_ ficam os comandos customizados.
