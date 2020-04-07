@@ -1,0 +1,13 @@
+image: 'cypress/base' # Baixa a imagem docker oficial do Cypress
+
+# Estágios do pipeline
+stages: 
+    - e2e
+
+# Nome do estágio
+
+end-to-end testing:
+    stage: e2e
+    scripts: # Scripts que serão executados no pipeline
+     - npm install # Instala o Cypress baseado nas dev dependecies configurado no package.json
+     - npm test # Roda os testes em headless mode
